@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textPrimary font-sans antialiased selection:bg-primary/30 transition-colors duration-300;
+    font-family: 'Outfit', 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/60 backdrop-blur-xl border border-white/40 shadow-xl rounded-2xl transition-all duration-300 hover:shadow-2xl hover:bg-white/70 hover:border-white/60;
+  }
+
+  .glass-panel {
+    @apply bg-white/40 backdrop-blur-lg border border-white/30 shadow-lg rounded-xl;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-teal-500 hover:to-primary text-white font-medium py-2.5 px-6 rounded-xl transition-all duration-300 shadow-lg shadow-primary/20 hover:shadow-primary/40 active:scale-95 flex items-center justify-center gap-2;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-textPrimary border border-gray-200 hover:bg-gray-50 font-medium py-2.5 px-6 rounded-xl transition-all duration-300 shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl bg-white/80 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all backdrop-blur-sm text-textPrimary placeholder-gray-400;
+  }
+
+  .table-header {
+    @apply px-6 py-4 text-left text-xs font-semibold text-textMuted uppercase tracking-wider bg-gray-50/50;
+  }
+
+  .table-row {
+    @apply hover:bg-gray-50/50 transition-colors border-b border-gray-100 last:border-0;
+  }
+
+  .table-cell {
+    @apply px-6 py-4 whitespace-nowrap text-sm text-textPrimary;
+  }
+}
