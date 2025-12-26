@@ -25,6 +25,7 @@ app.use('/api/users', require('./routes/user.routes'));
 app.use('/api/search', require('./routes/search.routes'));
 app.use('/api/quotes', require('./routes/quote.routes'));
 app.use('/api/ai', require('./routes/ai.routes'));
+app.use('/api/reminders', require('./routes/reminder.routes'));
 
 // Default Route
 app.get('/', (req, res) => {
